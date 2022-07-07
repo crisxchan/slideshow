@@ -1,0 +1,112 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+header, footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* header */
+header {
+    box-shadow: 0 2px 4px 0 #33333330, 0 2px 16px 0 #33333330;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 80px;
+}
+
+/* main */
+main {
+    height: 100%;
+    width: 100%;
+}
+
+main > div {
+    height: 100%;
+    padding: 0 5%;
+}
+
+.image-wrapper {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "left center right";
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.image-frame {
+    width: 200px;
+    height: 350px;
+    border: solid black;
+    transition: 200ms ease-in-out 100ms;
+}
+
+.image-frame[data-active=false]{
+    background-color: grey;
+}
+
+.image-frame[data-active=true]{
+    height: 400px;
+    width: 100%;
+    background-color: yellow;
+}
+
+button{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+    padding: .5rem;
+    transform: translateY(50%);
+    border: none;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+button.left {
+    left: 1rem;
+}
+
+button.right {
+    right: 1rem;
+}
+
+/* footer */
+footer {
+    justify-content: center;
+    height: 80px;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.ghlogo {
+    font-size: 30px;
+    color: black;
+}
