@@ -11,7 +11,6 @@ function loadImage() {
     if (i === 1) imgFrame.dataset.active = true;
     else imgFrame.dataset.active = false;
 
-    console.log(imagesData.imagesData[i]);
     const img = document.createElement('img');
     img.src = `../../dist/assets/${imagesData.imagesData[i].imgSrc}`;
 
