@@ -82,10 +82,12 @@ function loadMainContent() {
   return carouselWrapper;
 }
 
-export default function getMainContent() {
+function getMainContent() {
   const main = document.createElement('main');
 
   main.appendChild(loadMainContent());
 
   return main;
 }
+
+export { getMainContent, imgSlide };

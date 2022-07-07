@@ -1,4 +1,4 @@
-import getMainContent from './mainContent';
+import { getMainContent, imgSlide } from './mainContent';
 
 function getHeader() {
   const header = document.createElement('header');
@@ -42,4 +42,6 @@ export default function loadPage() {
   const body = document.querySelector('body');
 
   body.append(getHeader(), getMain(), getFooter());
+
+  setInterval(imgSlide.bind(this, 'right'), 5000);
 }
