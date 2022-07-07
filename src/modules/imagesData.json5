@@ -1,0 +1,16 @@
+{
+    "imagesData": [
+        {
+            "id": 0,
+            "imgSrc": "beach.jpg"
+        },
+        {
+            "id": 1,
+            "imgSrc": "ridge.jpg"
+        },
+        {
+            "id": 2,
+            "imgSrc": "snow-mountain.jpg"
+        }
+    ]
+}

@@ -18,7 +18,7 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 10px;
+    gap: 5%;
 }
 
 header, footer {
@@ -39,10 +39,13 @@ header {
 main {
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 main > div {
     height: 100%;
+    max-width: 750px;
     padding: 0 5%;
 }
 
@@ -51,23 +54,26 @@ main > div {
     display: grid;
     align-items: center;
     grid-template-areas: "left center right";
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1.3fr 1fr;
 }
+
 .image-frame {
-    width: 200px;
-    height: 350px;
-    border: solid black;
-    transition: 200ms ease-in-out 100ms;
+    transition: 1s ease-in-out;
+    object-fit: contain;
+}
+
+.image-frame > img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
 .image-frame[data-active=false]{
-    background-color: grey;
+    filter: blur(2px);
 }
 
 .image-frame[data-active=true]{
     height: 400px;
-    width: 100%;
-    background-color: yellow;
 }
 
 button{

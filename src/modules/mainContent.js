@@ -1,3 +1,5 @@
+import imagesData from './imagesData.json5';
+
 function loadImage() {
   const imagesWrapper = document.createElement('ul');
   imagesWrapper.classList.add('image-wrapper');
@@ -9,8 +11,9 @@ function loadImage() {
     if (i === 1) imgFrame.dataset.active = true;
     else imgFrame.dataset.active = false;
 
-    const img = document.createElement('div');
-    img.innerHTML = i + 1;
+    console.log(imagesData.imagesData[i]);
+    const img = document.createElement('img');
+    img.src = `../../dist/assets/${imagesData.imagesData[i].imgSrc}`;
 
     imgFrame.append(img);
 
